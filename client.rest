@@ -1,19 +1,27 @@
 
 @baseUrl = http://localhost:3000
 
-## AppControllerGetHello
+### Recados
+
+GET {{baseUrl}}/recados
+
+### Recados ID
+
+GET {{baseUrl}}/recados/123
+
+### AppControllerGetHello
 
 # @name AppControllerGetHello
 
 GET {{baseUrl}}
 
-## ConceitosManualController
+### ConceitosManualController
 
 # @name ConceitosManualController
 
 GET {{baseUrl}}/conceitos-manual/
 
-## ConceitosAutomaticoController
+### ConceitosAutomaticoController
 
 # @name ConceitosAutomaticoController
 
