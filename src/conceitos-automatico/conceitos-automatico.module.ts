@@ -1,7 +1,11 @@
 import { Controller, Get, Module } from '@nestjs/common';
 import { ConceitosAutomaticoController } from './conceitos-automatico.controller';
+import { ConceitosAutomaticoService } from './conceitos-automatico.service';
 
-@Controller('conceitos-automatico')
+@Module({
+  controllers: [ConceitosAutomaticoController],
+  providers: [ConceitosAutomaticoService],
+})
 export class ConceitosAutomaticoModule {
   @Get()
   home(): string {
