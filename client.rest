@@ -20,7 +20,7 @@ Content-Type: application/json
 {
     "texto": "Novo recado",
     "de": "Juliana",
-    "para": "Ariel",
+    "para": "Ariel"
   }
 
 ### Atualiza um recado
