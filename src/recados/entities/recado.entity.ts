@@ -11,13 +11,13 @@ export class Recado {
   @PrimaryGeneratedColumn()
   id?: number;
 
-  @Column({ type: 'varchar', length: '255' })
+  @Column({ type: 'varchar', length: 255 })
   texto?: string;
 
-  @Column({ type: 'varchar', length: '50' })
+  @Column({ type: 'varchar', length: 50 })
   de?: string;
 
-  @Column({ type: 'varchar', length: '50' })
+  @Column({ type: 'varchar', length: 50 })
   para?: string;
 
   @Column({ default: false })
