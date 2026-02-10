@@ -4,6 +4,17 @@ import { AppService } from './app.service';
 import { RecadosModule } from '../recados/recados.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+
+@Entity('teste_debug')
+class TesteDebug {
+  @PrimaryGeneratedColumn()
+  id!: number;
+
+  @Column()
+  nome!: string;
+}
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -13,8 +24,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'postgres',
       database: 'postgres',
       password: '1234',
-      autoLoadEntities: true, //carrega entidades sem precisar especifica-las
+      entities: [TesteDebug], //carrega entidades sem precisar especifica-las
       synchronize: true, //sincroniza com o BD, não deve ser usado em prod
+      logging: true,
     }),
     RecadosModule,
   ],
