@@ -18,42 +18,22 @@ POST {{baseUrl}}/recados
 Content-Type: application/json
 
 {
-    "texto": "Novo recado",
-    "de": "Juliana",
-    "para": "Ariel"
+    "texto": "Te amo",
+    "de": "Ariel",
+    "para": "Juliana"
   }
 
 ### Atualiza um recado
 
-PATCH  {{baseUrl}}/recados/2
+PATCH  {{baseUrl}}/recados/4
 Content-Type: application/json
 
 {
-    "texto": "Atualizar o recado",
-    "de": "Juliana",
-    "para": "Ariel",
-    "lido": true,
-    "data": "2026-02-02T21:10:36.781Z"
+    "lido": true
   }
 
 ### Apaga um recado
 
-DELETE {{baseUrl}}/recados/2
+DELETE {{baseUrl}}/recados/3
 
-### AppControllerGetHello
 
-# @name AppControllerGetHello
-
-GET {{baseUrl}}
-
-### ConceitosManualController
-
-# @name ConceitosManualController
-
-GET {{baseUrl}}/conceitos-manual/
-
-### ConceitosAutomaticoController
-
-# @name ConceitosAutomaticoController
-
-GET {{baseUrl}}/conceitos-automatico/
