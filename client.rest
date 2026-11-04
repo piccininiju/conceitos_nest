@@ -2,18 +2,15 @@
 @baseUrl = http://localhost:3000
 
 ### Lista todos os recados
-
 GET {{baseUrl}}/recados/
 ?limit=100
 &offset=20
 //&user=luiz
 
 ### Lista apenas um recado
-
 GET {{baseUrl}}/recados/2
 
 ### Cria um recado
-
 POST {{baseUrl}}/recados
 Content-Type: application/json
 
@@ -24,7 +21,6 @@ Content-Type: application/json
   }
 
 ### Atualiza um recado
-
 PATCH  {{baseUrl}}/recados/4
 Content-Type: application/json
 
@@ -33,7 +29,38 @@ Content-Type: application/json
   }
 
 ### Apaga um recado
-
 DELETE {{baseUrl}}/recados/3
+
+
+#
+
+
+#Pessoas
+###Lista todas as pessoas
+GET {{baseUrl}}/pessoas/
+
+###Lista apenas uma pessoa
+GET {{baseUrl}}/pessoas/7/
+
+### Cria uma pessoa
+POST {{baseUrl}}/pessoas/
+Content-Type: application/json
+
+{
+    "email": "email@email.com",
+    "password": "123456",
+    "nome": "Ariel"
+  }
+
+### Atualiza uma pessoa
+PATCH  {{baseUrl}}/pessoas/7
+Content-Type: application/json
+
+{
+    "password": "33333"
+  }
+
+### Apaga uma pessoa
+DELETE {{baseUrl}}/pessoas/2
 
 
